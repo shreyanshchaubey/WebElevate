@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Web Enhancement Suite</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="section">
+      <h3>Video Speed Control</h3>
+      <div class="control-group">
+        <input type="range" id="speedControl" min="0" max="16" step="0.1" value="1">
+        <div class="number-input">
+          <input type="number" id="speedInput" min="0" max="16" step="0.1" value="1">
+          <span>x</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Volume Boost</h3>
+      <div class="control-group">
+        <input type="range" id="volumeControl" min="0" max="500" value="100">
+        <div class="number-input">
+          <input type="number" id="volumeInput" min="0" max="500" step="1" value="100">
+          <span>%</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Auto-pause Video on Tab Change</h3>
+      <label class="switch">
+        <input type="checkbox" id="autoPauseToggle">
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="section">
+      <h3>Ad Blocker</h3>
+      <label class="switch">
+        <input type="checkbox" id="adBlockToggle">
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="section">
+      <h3>Cookie Settings</h3>
+      <select id="cookieConsentAction">
+        <option value="accept">Accept All Cookies</option>
+        <option value="reject">Reject All Cookies</option>
+        <option value="necessary">Accept Necessary Only</option>
+        <option value="disable">Disable Auto-handling</option>
+      </select>
+    </div>
+
+    <div class="section">
+      <h3>Screenshot</h3>
+      <button id="captureScreen">Capture Full Page</button>
+    </div>
+
+    <div id="captureStatus" style="display: none;">
+      Capturing full page...
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html> 

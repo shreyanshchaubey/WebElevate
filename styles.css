@@ -1,0 +1,270 @@
+.container {
+  width: 300px;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background: #f8f9fa;
+  max-height: 580px;
+  overflow-y: auto;
+}
+
+.section {
+  background: white;
+  margin-bottom: 12px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.section h3 {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  color: #2196F3;
+  font-weight: 600;
+}
+
+/* Switch styling */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .3s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .3s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Range and number input styling */
+.control-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+input[type="range"] {
+  flex: 1;
+  height: 4px;
+  border-radius: 2px;
+  background: #e0e0e0;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #2196F3;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.number-input {
+  display: flex;
+  align-items: center;
+  background: #f5f5f5;
+  border-radius: 4px;
+  padding: 2px 8px;
+}
+
+.number-input input[type="number"] {
+  width: 50px;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  padding: 4px;
+  -moz-appearance: textfield;
+}
+
+.number-input input[type="number"]::-webkit-inner-spin-button,
+.number-input input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.number-input span {
+  color: #666;
+  font-size: 12px;
+  margin-left: 2px;
+}
+
+/* Select styling */
+select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  background: white;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  outline: none;
+}
+
+select:focus {
+  border-color: #2196F3;
+}
+
+/* Button styling */
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+  margin-top: 5px;
+}
+
+button:hover {
+  background-color: #1976D2;
+}
+
+#captureStatus {
+  margin-top: 10px;
+  text-align: center;
+  color: #2196F3;
+  font-size: 14px;
+  padding: 0 15px;
+}
+
+/* Remove scrollbars */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* General improvements */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+body {
+  margin: 0;
+  background: #f8f9fa;
+  max-height: 600px;
+  overflow: hidden;
+}
+
+#qrCodeContainer {
+  background-color: #ffffff;
+  padding: 10px;
+  margin: 10px auto;
+  text-align: center;
+  min-height: 128px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#qrCodeContainer img {
+  display: block;
+  margin: 0 auto;
+}
+
+button#generateQRCode {
+  display: block;
+  margin: 0 auto;
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button#generateQRCode:hover {
+  background-color: #45a049;
+}
+
+.qr-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.qr-buttons button {
+  flex: 1;
+  padding: 8px;
+}
+
+#qrResult {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  word-break: break-all;
+}
+
+#qrResult a {
+  color: #2196F3;
+  text-decoration: none;
+}
+
+#qrResult a:hover {
+  text-decoration: underline;
+}
+
+.spacing {
+  height: 12px;
+}
+
+.section select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: white;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.section select:focus {
+  outline: none;
+  border-color: #2196F3;
+} 
